@@ -19,12 +19,13 @@
     color: #fff;
     font-size: 24px;
 }
-.category-item:nth-of-type(1) {
-    width: 33%;
-    height: 66%;
-    background-color: blue;
+.leaderboard{
+     width: 33%;
+     height: 66%;
 }
-
+.white{
+    background-color: whitesmoke;
+}
 div {
     display: block;
 }
