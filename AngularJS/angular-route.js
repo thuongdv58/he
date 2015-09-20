@@ -7,7 +7,7 @@
 
 /**
  * @ngdoc module
- * @name ngRoute
+ * @name ngRoute           
  * @description
  *
  * # ngRoute
