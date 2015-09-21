@@ -1,11 +1,7 @@
 var app = angular.module('quizApp', []);
 app.directive('quiz', function() {
     return {
-<<<<<<< HEAD
 	restrict: 'AE',
-=======
-	restrict: 'E',
->>>>>>> e9fe9a678c7524795edbcc1f0b178f1ce53dc6f8
 	scope: {},
 	templateUrl: 'questionpanels.html',
 	link: function(scope, elem, attrs) {
@@ -21,7 +17,6 @@ app.directive('quiz', function() {
             };
 	}
     }
-<<<<<<< HEAD
 });
 app.directive ('leaderboard',function(){
     return {
@@ -72,6 +67,4 @@ var option={
     profile:false;
     quizanswer:'none';
 }
-=======
 });
->>>>>>> e9fe9a678c7524795edbcc1f0b178f1ce53dc6f8
