@@ -60,11 +60,10 @@ app.controller("globalcontroler",function(){
     }
 });
 var option={
-    login:true;
-    menu:false;
-    answer:false;
-    leaderboard:false;
-    profile:false;
-    quizanswer:'none';
-}
-});
+    login:true,
+    menu:false,
+    answer:false,
+    leaderboard:false,
+    profile:false,
+    quizanswer:'none',
+};
