@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = 'quizApp'>
     <head><!---->
         <title>Quiz App</title>
-        <script type="text/javascript" src="AngularJS/angular.min.js"></script>
+        <script type="text/javascript" src="js/AngularJS/angular.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
     </head><!---->
     
     <body><!----->
-        <div class="container">
+        <div class="container" ng-controller="globalcontroller as control" >
         
-             <div class="siginForm">
+             <div class="siginForm" ng-show="control.option.login">
                 <div class="card">
                     <div class="nameregister"></div>
                     <div class="avatar-list"></div>
@@ -18,7 +18,7 @@
                 </div>
              </div><!--end the loginform-->
              
-             <div class="mainmenu"><!---main menu-->
+             <div class="mainmenu" ng-show="control.option.menu"><!---main menu-->
              
                 <div class="toolbar">
                     <div class="avatar">
@@ -29,21 +29,54 @@
                 </div><!--end toolbar-->
                 
                 <div class="category-list">
-                    <div class="category-item white leaderboard"></div>
-                    <div class="category-item green food-drink"></div>
-                    <div class="category-item yellow general-knowleged"></div>
-                    <div class="category-item blue history"></div>
-                    <div class="category-item red entertainment"></div>
-                    <div class="category-item violet sports"></div>
-                    <div class="category-item red geography"></div>
-                    <div class="category-item green sience-nature"></div>
-                    <div class="category-item violet TV-movies"></div>
-                    <div class="category-item blue muisc"></div>
-                    <div class="category-item white profile"></div>
+                    <div class="category-item white leaderboard" ng-click="control.viewleaderboard()">
+                    </div>
+                    <div class="category-item green food-drink" ng-click="control.startanswer('foodanddrink')">
+                    </div>
+                    <div class="category-item yellow general-knowledge" ng-click="control.startanswer('general-knowledge')">
+                    </div>
+                    <div class="category-item blue history" ng-click="control.startanswer('history')">
+                    </div>
+                    <div class="category-item red entertainment" ng-click="control.startanswer('entertainment')">
+                    </div>
+                    <div class="category-item violet sports" ng-click="control.startanswer('sports')">
+                    </div>
+                    <div class="category-item red geography" ng-click="control.startanswer('geography')">
+                    </div>
+                    <div class="category-item green sience-nature" ng-click="control.startanswer('sience-nature')">
+                    </div>
+                    <div class="category-item violet TV-movies" ng-click="control.startanswer('TV-movies')">
+                    </div>
+                    <div class="category-item blue music" ng-click="control.startanswer('music')">
+                    </div>
+                    <div class="category-item white profile" ng-click="control.editprofile()">
+                    </div>
                 </div><!--end category-list-->
-                
              </div><!--end main menu-->
-             
+             <div ng-show="control.option.answer">
+                    <div quiz class="#" ng-show="control.option.quizanswer=='food-drink'">
+                    </div>
+                    <div quiz class="#" ng-show="control.option.quizanswer=='general-knowledge'">
+                    </div>
+                    <div quiz class="#" ng-show="control.option.quizanswer=='history'">
+                    </div>
+                    <div quiz class="#" ng-show="control.option.quizanswer=='entertainment'">
+                    </div>
+                    <div quiz class="#" ng-show="control.option.quizanswer=='sports'">
+                    </div>
+                    <div quiz class="#" ng-show="control.option.quizanswer=='geography'">
+                    </div>
+                    <div quiz class="#" ng-show="control.option.quizanswer=='sience-nature'">
+                    </div>
+                    <div quiz class="#" ng-show="control.option.quizanswer=='music'">
+                    </div>
+                    <div quiz class="#" ng-show="control.option.quizanswer=='TV-movies'">
+                    </div>
+             </div>
+             <div profile class="#" g-show="control.option.profile">
+                    </div>
+             <div leaderboard class="#"ng-show="control.option.leaderboard">
+                    </div>
              
         </div> <!--end the container-->
     </body><!---->
