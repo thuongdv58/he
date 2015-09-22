@@ -3,7 +3,7 @@ app.directive('quiz', function() {
     return {
 	restrict: 'AE',
 	scope: {},
-	templateUrl: 'questionpanels.html',
+	templateUrl: 'directive\questionpanels.html',
 	link: function(scope, elem, attrs) {
             scope.start = function() {
                 scope.Done=false;
@@ -22,17 +22,24 @@ app.directive ('leaderboard',function(){
     return {
         restrict:'AEC',
         scope:{},
-        templateUrl:'leaderboard.html',
+        templateUrl:'directive\leaderboard.html',
     }
 });
 app.directive ('profile',function(){
     return {
         restrict:'AEC',
         scope:{},
-        templateUrl:'profile.html',
+        templateUrl:'directive\profile.html',
     }
 });
-app.controller("globalcontroler",function(){
+app.directive ('category',function(){
+    return {
+        restrict:'AEC',
+        scope:{},
+        templateUrl:'directive\category.html',
+    }
+});
+app.controller("globalcontroller",function(){
     this.option=opt;
     this.startanswer=function(val)
     {
@@ -59,11 +66,11 @@ app.controller("globalcontroler",function(){
         this.option.menu=false;
     }
 });
-var option={
-    login:true,
+var opt={
+    login:false,
     menu:false,
     answer:false,
     leaderboard:false,
-    profile:false,
+    profile:true,
     quizanswer:'none',
 };
