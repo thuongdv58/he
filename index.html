@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app = "quizApp">
+    <head><!---->
+        <title>Quiz App</title>
+        <script type="text/javascript" src="js/AngularJS/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    
+    <body ng-controller = "menuController">
+        <div class="container" ng-switch="option">
+         
+          <div ng-switch-when = "menu">
+             <div class = "profile">
+                <img alt="avatar" src="img/avatar/avatar.png" style="position: absolute;width:5%;height:70%;top: 10px;left: 3%;"">
+                <label style="position: absolute;height: 70%;font-size: 5vh;left:10%;text-align: left;">Name</label>
+             </div>
+             <div class = "leaderboard">
+                <img alt="Image" ng-src="img/">
+                 <label>Leaderboard</label>
+             </div>
+             <div ng-repeat = "category in data">
+               <div class="menu-item " ng-class ="category.id+' '+category.theme">
+                  
+                  <img alt="Image" ng-src="img/{{category.id}}.png">
+                  <label>{{category.name}}</label>
+               </div>
+             
+          </div>
+          <div class = "leaderboard" ng-switch-when = "leaderboard">This is leaderboard</div>
+          <div class = "login" ng-switch-when = "login"></div>
+          <div class = "answer" ng-switch-when = "answer"></div>
+        </div>
+    </body><!---->
+</html>
