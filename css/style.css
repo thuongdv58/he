@@ -1,34 +1,105 @@
-.category-list{
-    display: block;
+/* The grid-area property places a grid item into a named
+* region (area) of the grid. */
+html, body{
+	overflow-x: hidden;
+}
+.menu-item{
+	position:absolute;
+	width:16.67%;
+	height:28vh;
+	border: solid 2px #666666;
+}
+.nopadding {
+   padding: 0px !important;
+   margin: 0px !important;
+}
+.large-height{
+	height:56vh;
+}
+.normal-height{
+	height:28vh;
+}
+@media screen and (max-width: 768px){
+	.large-height{
+	height:28vh;
+}
+}
+.red{
+	background-color:#800000; ;
+}
+.purple{
+	background-color: #9932cc;
+}
+.yellow{
+	background-color: gold;
+}
+.blue{
+	background-color: #0080c0;
+}
+.green{
+    background-color: #006400;
+}
+.dark{
+    background-color: #2e2e2e;
+}
+.orange{
+	background-color: #ff8000; 
+}
+.food{
+   top:16vh;
+   right: 50%;
+}
+.history{
+	width: 33.33%;
+	top: 16vh;
+	right: 0%;
+}
+.knowledge{
+	top: 16vh;
+	right:33.33%;
+}
+.entertainment{
+	bottom: 0px;
+	right: 33.33%;
+	width: 33.33%;
+	height: 56vh;
+}
+.geography{
+	top: 44%;
+	right: 16.67%;
+}
+.science{
+	top: 44vh;
+	right: 0px;
+}
+.music{
+	bottom: 0px;
+	right: 16.67%
+}
+.tvmovies{
+	bottom: 0px;
+	right: 0%;
+}
+.sports{
+	right: 83.33%;
+	bottom: 0px;
+}
 
-    position: absolute;
-    top: 100px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 2px 0;
-    margin: 0 -2px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-.toolbar {
-    height: 100px;
-    z-index: 1;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    background-color: #00bad2;
-    color: #fff;
-    font-size: 24px;
-}
 .leaderboard{
-     width: 33%;
-     height: 66%;
+	background-color: #778899;
+	position: absolute;
+	width: 33.33%;
+	height: 56vh;
+	top:16vh;
+	right: 66.67%;
 }
-.white{
-    background-color: whitesmoke;
+.profile{
+	background-color: #191970;
+	width: 100%;
+	height:16vh;
+	top:0;
+	right:0;
+	border-bottom: 3px solid #666666;
 }
-div {
-    display: block;
-}
-
 
 
