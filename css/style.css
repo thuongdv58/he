@@ -3,11 +3,17 @@
 html, body{
 	overflow-x: hidden;
 }
-.menu-item{
+menu-item{
 	position:absolute;
 	width:16.67%;
 	height:28vh;
-	border: solid 2px #666666;
+	border: solid 3px #666;
+	padding: 0px !important;
+    margin: 0px !important;
+}
+.fullscreen{
+	width:100vw;
+	height:100vh;
 }
 .nopadding {
    padding: 0px !important;
@@ -21,14 +27,17 @@ html, body{
 }
 @media screen and (max-width: 768px){
 	.large-height{
-	height:28vh;
-}
+	 height:33vw;
+    }
+    .normal-height{
+	 height:33vw;
+    }
 }
 .red{
 	background-color:#800000; ;
 }
 .purple{
-	background-color: #9932cc;
+	background-color: #660066;
 }
 .yellow{
 	background-color: gold;
@@ -45,46 +54,6 @@ html, body{
 .orange{
 	background-color: #ff8000; 
 }
-.food{
-   top:16vh;
-   right: 50%;
-}
-.history{
-	width: 33.33%;
-	top: 16vh;
-	right: 0%;
-}
-.knowledge{
-	top: 16vh;
-	right:33.33%;
-}
-.entertainment{
-	bottom: 0px;
-	right: 33.33%;
-	width: 33.33%;
-	height: 56vh;
-}
-.geography{
-	top: 44%;
-	right: 16.67%;
-}
-.science{
-	top: 44vh;
-	right: 0px;
-}
-.music{
-	bottom: 0px;
-	right: 16.67%
-}
-.tvmovies{
-	bottom: 0px;
-	right: 0%;
-}
-.sports{
-	right: 83.33%;
-	bottom: 0px;
-}
-
 .leaderboard{
 	background-color: #778899;
 	position: absolute;
@@ -94,12 +63,57 @@ html, body{
 	right: 66.67%;
 }
 .profile{
-	background-color: #191970;
-	width: 100%;
+	background-color: #34495e;
 	height:16vh;
 	top:0;
 	right:0;
 	border-bottom: 3px solid #666666;
+}
+.startbutton{
+	width:50%;
+	height: 12%;
+	position: absolute;
+	left: 20%;
+	bottom: 0;
+	font-size: 3.5em;
+	font-family: fantasy;
+	background-color: rgba(22,22,22,0.5);
+   -webkit-box-shadow: 0 0 1px #666;
+   -moz-box-shadow: 0 0 1px #666;
+   box-shadow: 0 0 1px #666;
+	text-align: center;
+	color: #eeeeee;
+}
+.backbutton{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 5%;
+	height: 5%;
+}
+.backbutton img{
+	width: 100%;
+	heght: 100%;
+}
+.startbutton:hover {
+	-webkit-box-shadow: 0 0 5px #777;
+   -moz-box-shadow: 0 0 5px #777;
+   box-shadow: 0 0 5px #777;
+   background-color: rgba(44,44,44,0.6);
+}
+@media screen and (max-width: 768px){
+	.profile{
+	   height:20vw;
+	}
+	.startbutton{
+	  width:100%;
+	  height:15%;
+	  left:0;
+	}
+	.backbutton{
+	  width: 20vw;
+	  height: 10vh;
+	}
 }
 
 

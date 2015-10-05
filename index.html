@@ -6,48 +6,51 @@
         <script type="text/javascript" src="js/ui-bootstrap-tpls-0.13.4.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/animations.css"/>
+        
+        <link rel="stylesheet" type="text/css" href="css/hoverEffect.css"/>
         <link rel="stylesheet" type="text/css" href ="css/bootstrap.min.css"/>
     </head>
     <body ng-controller = "menuController" style="width:100%;padding: 0 0;margin:0">
         <div class="container-fluid" style="padding:0px;background-color:blue" ng-switch="option">
          
           <div ng-switch-when = "menu">
-             <div class = "profile col-md-xs-12 nopadding" style = "color: white; "ng-click="changeTo('profile')">
-                <div  class = "col-md-1" >  <!-- Space for avatar -->
-                  <img alt="avatar" src="img/avatar/avatar.png" class = "img-circle img-responsive">
+             <div class = "profile col-md-12 col-xs-12 " style = "color: white;" ng-click="changeTo('profile')">
+                <div  class = "col-md-1 col-xs-3" style = "height:100%">  <!-- Space for avatar -->
+                  <img alt="avatar" src="img/avatar/avatar.png" class = "img-circle" style = "width:80%;position: absolute;bottom:10%">
                 </div>
-                <div class = "col-md-4">   <!-- User name -->
-                 <span style="font-size: 4vh;text-align: left;bottom: 0px;">{{user.name}}</span>
-                 <div style="font-size: 2.5vh;text-align: left;bottom: 0px;height:20%">
+                <div class = "col-md-4 col-xs-6">   <!-- User name -->
+                 <span style="font-size: 2em;text-align: left;bottom: 0px;">{{user.name}}</span>
+                 <div style="font-size: 1.5em;text-align: left;bottom: 0px;height:40%">
                    <span style = "bottom: 0px">Level: {{user.level}}</span>
                    <span>Rank: {{user.rank}}</span>
                  </div>
                 </div>
-                <div class = "col-md-3 col-md-offset-10">
-                <span>Online: </span>
-                </div>
+
              </div>
              <div class = "col-md-4 col-xs-6 nopadding">
-                <menu-item class = "menu-item col-md-12 col-xs-12 large-height orange" item = "'General Knowledge'"></menu-item>
-                <menu-item class = "menu-item col-md-6 col-xs-12 normal-height blue" item = "'Food & Drink'"></menu-item>
-                <menu-item class = "menu-item col-md-6 col-xs-12 normal-height dark" item = "'Music'"></menu-item>
+                <menu-item class = "col-md-12 col-xs-12 large-height orange" item = "'General Knowledge'" ></menu-item>
+                <menu-item class = "col-md-6 col-xs-12 normal-height blue" item = "'Food & Drink'"></menu-item>
+                <menu-item class = "col-md-6 col-xs-12 normal-height dark" item = "'Music'"></menu-item>
              </div> 
              <div class = "col-md-4 col-xs-6 nopadding">
-                <menu-item class = " menu-item col-md-6 col-xs-12 normal-height green" item = "'Sports'"></menu-item>
-                <menu-item class = " menu-item col-md-6 col-xs-12 normal-height yellow" item = "'Animals'"></menu-item>
-                <menu-item class = " menu-item col-md-12 col-xs-12 large-height red" item = "'Geography'"></menu-item>
+                <menu-item class = "col-md-6 col-xs-12 normal-height green" item = "'Sports'"></menu-item>
+                <menu-item class = "col-md-6 col-xs-12 normal-height yellow" item = "'Animals'"></menu-item>
+                <menu-item class = "col-md-12 col-xs-12 large-height red" item = "'Geography'"></menu-item>
              </div> 
              <div class = "col-md-4 col-xs-12 nopadding">
-                <menu-item class = "menu-item col-md-12 col-xs-6 normal-height blue" item = "'History'"></menu-item>
-                <menu-item class = "menu-item col-md-6 col-xs-6 normal-height dark" item = "'Science'"></menu-item>
-                <menu-item class = "menu-item col-md-6 col-xs-6 normal-height red" item = "'Entertainment'"></menu-item>
-                <menu-item class = "menu-item col-md-6 col-xs-6 normal-height purple" item = "'Movies'"></menu-item>
-                <menu-item class = "menu-item col-md-6 col-xs-6 normal-height orange" item = "'Random'"></menu-item>
+                <menu-item class = "col-md-12 col-xs-6 normal-height blue" item = "'History'" ></menu-item>
+                <menu-item class = "col-md-6 col-xs-6 normal-height dark" item = "'Science'"></menu-item>
+                <menu-item class = "col-md-6 col-xs-6 normal-height red" item = "'Entertainment'"></menu-item>
+                <menu-item class = "col-md-6 col-xs-6 normal-height purple" item = "'Movies'"></menu-item>
+                <menu-item class = "col-md-6 col-xs-6 normal-height orange" item = "'Random'"></menu-item>
              </div>
           </div>
           <div class = "leaderboard" ng-switch-when = "leaderboard">This is leaderboard</div>
           <div class = "login" ng-switch-when = "login"></div>
-          <div class = "answer" ng-switch-when = "answer"></div>
+          <div class = "answer" ng-switch-when = "answer">
+             <startup-screen category="category"></startup-screen>
+          </div>
           <div class = "login" ng-switch-when = "profile">Hello this is profile</div>
         </div>
     </body><!---->

@@ -1,0 +1,57 @@
+.cube {
+	width: 100%;
+	text-align: center;
+	height: 100%;
+
+	-webkit-transition: -webkit-transform .33s;
+	transition: transform .33s; /* Animate the transform properties */
+
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d; /* <-NB */
+}
+.cube p {
+   font-family: Georgia, serif;
+   font-style: italic;
+   width:100%;
+   font-size: 5vh;
+   position: absolute;
+   bottom: 30%;
+   font-stretch: semi-expanded;
+   color: #000000;
+   padding: 10px 20px 20px;
+   text-align: center;
+}
+.cube img {
+   display: block;
+   position: relative;
+   width:70%;
+   height:70%;
+   top:10%;
+   left:15%;
+}
+/* The two faces of the cube */
+.flippety,.overlay {
+	width:100%;
+	height:100%;
+
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+	box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+}
+
+/* Position the faces */
+.flippety {
+	-webkit-transform: translateZ(50px);
+	transform: translateZ(50px);
+}
+
+.overlay {
+	-webkit-transform: rotateX(-90deg) translateZ(-50px);
+	transform: rotateX(-90deg) translateZ(-50px);
+}
+
+/* Rotate the cube */
+.cube:hover {
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg); /* Text bleed at 90º */
+}
