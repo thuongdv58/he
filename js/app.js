@@ -3,10 +3,8 @@ app.run(function($rootScope) {
 	$rootScope.option = "menu";
 	$rootScope.category = "'Sports'";
 	$rootScope.changeTo = function(str){
-    	alert("change to "+ str);
-    	$rootScope.option = "profile";
+    	$rootScope.option = str;
     };
-   
     
 	
 })
@@ -52,4 +50,20 @@ app.directive("startupScreen",function(){
 		},
 		templateUrl: 'startup-screen.html'
 	}
+})
+app.directive('leaderboard',function(){
+	return{
+		restrict: "E",
+		controller: ['$scope','$rootScope','$http',function($scope,$rootScope,$http){
+			$http.get('json/leaderboard.json').success(function(data) {
+				$scope.players = data;
+				$scope.xsize = 2;
+			});
+			$scope.backToMenu = function(){
+				$rootScope.option = "menu";
+			}
+			
+		}],
+		templateUrl: 'leaderboard.html'
+	};
 })

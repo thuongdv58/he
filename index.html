@@ -17,17 +17,20 @@
           <div ng-switch-when = "menu">
              <div class = "profile col-md-12 col-xs-12 " style = "color: white;" ng-click="changeTo('profile')">
                 <div  class = "col-md-1 col-xs-3" style = "height:100%">  <!-- Space for avatar -->
-                  <img alt="avatar" src="img/avatar/avatar.png" class = "img-circle" style = "width:80%;position: absolute;bottom:10%">
+                  <img alt="avatar" src="img/avatar/avatar.png" class = "img-circle inside-image" >
                 </div>
-                <div class = "col-md-4 col-xs-6">   <!-- User name -->
+                <div class = "col-md-10 col-xs-6">   <!-- User name -->
                  <span style="font-size: 2em;text-align: left;bottom: 0px;">{{user.name}}</span>
                  <div style="font-size: 1.5em;text-align: left;bottom: 0px;height:40%">
                    <span style = "bottom: 0px">Level: {{user.level}}</span>
                    <span>Rank: {{user.rank}}</span>
                  </div>
-                </div>
-
+                 </div>
+                 <div class = "col-md-1 hidden-xs" style = "height:100%;top:0px" ng-click="changeTo('leaderboard')">
+                   <img alt="leaderboard" src="img/championcup.png" class = "inside-image">
+                 </div>
              </div>
+             
              <div class = "col-md-4 col-xs-6 nopadding">
                 <menu-item class = "col-md-12 col-xs-12 large-height orange" item = "'General Knowledge'" ></menu-item>
                 <menu-item class = "col-md-6 col-xs-12 normal-height blue" item = "'Food & Drink'"></menu-item>
@@ -46,7 +49,9 @@
                 <menu-item class = "col-md-6 col-xs-6 normal-height orange" item = "'Random'"></menu-item>
              </div>
           </div>
-          <div class = "leaderboard" ng-switch-when = "leaderboard">This is leaderboard</div>
+          <div class = "leaderboard" ng-switch-when = "leaderboard">
+            <leaderboard></leaderboard>
+          </div>
           <div class = "login" ng-switch-when = "login"></div>
           <div class = "answer" ng-switch-when = "answer">
              <startup-screen category="category"></startup-screen>
