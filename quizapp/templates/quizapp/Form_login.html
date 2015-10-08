@@ -1,16 +1,16 @@
-<form method="=post" action="">
+<form method="=pos t" action="">
     <table>
         <tr>
             <td>Username</td>
-            <td><input type="text"></td>
+            <td><input type="text" ng-model="username"></td>
         </tr>
         <tr>
             <td>PassWord</td >
-            <td><input type="text"></td>
+            <td><input type="text" ng-model="password"></td>
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit "></td>
+            <td><button ng-click="checkLogin()">Login</button> </td>
         </tr>
     </table>
 </form>
