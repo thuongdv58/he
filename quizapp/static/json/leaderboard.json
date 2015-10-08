@@ -1,0 +1,12 @@
+[
+   { "name":"Superman","score":"300"},
+   { "name":"Spiderman","score":"200"},
+   { "name":"Hulk","score":"200"},
+   { "name":"Thor","score":"200"},
+   { "name":"Iron man","score":"200"},
+   { "name":"Batman","score":"190"},
+   { "name":"Wolverine","score":"100"},
+   { "name":"Joker","score":"100"},
+   { "name":"Dead Shot","score":"100"},
+   { "name":"Arrow","score":"100"}
+]
