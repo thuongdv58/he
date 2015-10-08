@@ -69,6 +69,7 @@ app.directive('leaderboard',function(){
 })
 app.directive("ngFormlogin", function(){
 	return{
+
 		templateURL:'quizapp/templates/quizapp/Form_login.html'
 	};
 })
