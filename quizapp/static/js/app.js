@@ -1,4 +1,11 @@
 var app = angular.module('quizApp',['ui.bootstrap']);
+app.controller('LogiController', function($scope){
+	$scope.chekLogin = function(){
+		var username = $scope.username;
+		var password = $scope.password;
+		alert("Username: "+username+'- Password: '+password);
+	};
+});
 app.run(function($rootScope) {
 	$rootScope.option = "menu";
 	$rootScope.category = "'Sports'";
