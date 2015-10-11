@@ -67,3 +67,17 @@ app.directive('leaderboard',function(){
 		templateUrl: 'static/leaderboard.html'
 	};
 })
+app.controller('Logincontroller', function($scope){
+	$scope.checkLogin = function(){
+		var username = $scope.username;
+		var password = $scope.password;
+
+		alert("Username:"+username+'-Password:'+password);
+	}
+});
+app.directive("ngFormlogin", function(){
+	return{
+
+		templateURL:'quizapp/templates/quizapp/Form_login.html'
+	};
+})
