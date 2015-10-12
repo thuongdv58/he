@@ -40,7 +40,7 @@ app.directive("startupScreen",function(){
 				$rootScope.option = "menu";
 			}
 			$scope.beginAnswer = function(){
-				$http.get('json/'+category+'question.json').success(function(data) {
+				$http.get('static/json/'+category+'question.json').success(function(data) {
 			        $scope.questions = data;
 			    });
 			}
@@ -56,7 +56,7 @@ app.directive('leaderboard',function(){
 	return{
 		restrict: "E",
 		controller: ['$scope','$rootScope','$http',function($scope,$rootScope,$http){
-			$http.get('json/leaderboard.json').success(function(data) {
+			$http.get('static/json/leaderboard.json').success(function(data) {
 				$scope.players = data;
 				$scope.xsize = 2;
 			});
