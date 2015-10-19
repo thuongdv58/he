@@ -9,7 +9,8 @@ from django.contrib.auth.models import AbstractBaseUser
 class Account(AbstractBaseUser):
     email = models.EmailField(unique=True)
     username = models.CharField(max_length=40, unique=True)
-
+    score=models.IntegerField(blank=False,default=0)
+    rank=models.IntegerField(blank=False,default=0)
     first_name = models.CharField(max_length=40, blank=True)
     last_name = models.CharField(max_length=40, blank=True)
     tagline = models.CharField(max_length=140, blank=True)
@@ -26,6 +27,7 @@ class Account(AbstractBaseUser):
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
+    question_type = models.CharField(max_length=50)
     pub_date = models.DateTimeField('date published')
     def __unicode__(self):
         return self.question_text

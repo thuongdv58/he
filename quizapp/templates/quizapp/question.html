@@ -1,0 +1,9 @@
+<h1>{{question.question_text}}</h1>
+<form action="{% url 'getquestion' question.id %}" method="post">
+    {%for choice in question.choice_set.all%}
+    {% csrf_token %}
+    <input type="radio" name="choice" id="choice{{forloop.counter}}" VALUE="{{choice.id}}">
+    <label for="choice{{forloop.counter}}">{{choice.choice_text}}</label>
+    {% endfor%}
+    <button type="submit" value="getquestion">Submit</button>
+</form>
