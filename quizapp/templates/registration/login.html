@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
+<h1>Login</h1>
+<form method="post" action=".">
+  {% csrf_token %}
+  <input type='hidden' name='csrfmiddlewaretoken' value='kYCp41nADovjLEGQvpiDlOXbNF02crTK' />
+
+
+<div id="div_id_username" class="form-group"> <label for="id_username" class="control-label  requiredField">
+                {% csrf_token %}
+                Username<span class="asteriskField">*</span> </label> <div class="controls "> <input class="textinput textInput form-control" id="id_username" maxlength="254" name="username" type="text" /> </div> </div> <div id="div_id_password" class="form-group"> <label for="id_password" class="control-label  requiredField">
+                Password<span class="asteriskField">*</span> </label> <div class="controls "> <input class="textinput textInput form-control" id="id_password" name="password" type="password" /> </div> </div>
+
+
+  <input class='btn btn-block btn-primary' type="submit" value="Submit" />
+  <input type="hidden" name="next" value="{{next}}" />
+</form>
+</div>
+
+</div>
+<hr/>
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3 text-align-center'>
+<p>{% trans "Forgot password" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
+<p>{% trans "Not member" %}? <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>
+</div>
+</div>
+
+{% endblock %}
