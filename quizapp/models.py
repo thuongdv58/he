@@ -3,7 +3,7 @@ import datetime
 from django.utils import timezone
 # Create your models here.
 from django.conf import settings
-
+from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractBaseUser
 
 class Account(AbstractBaseUser):
@@ -24,6 +24,9 @@ class Account(AbstractBaseUser):
 
     def __unicode__(self):
         return self.email
+class user_infor(models.Model):
+    user=models.ForeignKey(User)
+    score=models.IntegerField(default=0)
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
