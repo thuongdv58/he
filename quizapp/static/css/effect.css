@@ -1,0 +1,66 @@
+/* The grid-area property places a grid item into a named
+* region (area) of the grid. */
+@keyframes zoom-out{
+	from{
+	-ms-transform: scale(0); /* IE 9 */
+    -webkit-transform: scale(0); /* Safari */
+    transform: scale(0);
+	}
+	to{
+	-ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari */
+    transform: scale(1);
+	}
+}
+@keyframes zoom-out-ver2{
+	from{
+	-ms-transform: scale(0.5); /* IE 9 */
+    -webkit-transform: scale(0.5); /* Safari */
+    transform: scale(0.5);
+	}
+	to{
+	-ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari */
+    transform: scale(1);
+	}
+}
+@keyframes zoom-in{
+	from{
+	-ms-transform: scale(2); /* IE 9 */
+    -webkit-transform: scale(2); /* Safari */
+    transform: scale(2);
+	}
+	to{
+	-ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari */
+    transform: scale(1);
+	}
+}
+@keyframes option-color {
+    from {background-color: white;}
+    to {background-color: #99ff99;}
+}
+@keyframes from-bot-to-top{
+	from{
+
+		-ms-transform: translateY(100px); /* IE 9 */
+	   	-webkit-transform: translateY(100px); /* Safari */
+	    transform: translateY(100px);
+	}
+	to{
+		-ms-transform: translateY(0px); /* IE 9 */
+   		-webkit-transform: translateY(0px); /* Safari */
+    	transform: translateY(0px);
+	}
+}
+@keyframes rotationX{
+
+	from{
+		-webkit-transform: rotateX(90deg); /* Safari */
+    	transform: rotateX(90deg);
+    }
+    to{
+    	-webkit-transform: rotateX(0); /* Safari */
+    	transform: rotateX(0);
+    }
+}

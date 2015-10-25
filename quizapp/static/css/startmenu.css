@@ -1,0 +1,182 @@
+
+.bottom-area{
+	color: white;
+	background-color: #abcdef;
+	width:40%;
+	height: 12%;
+	position: absolute;
+	left: 30%;
+	bottom: 0;
+}
+.question-area{
+	background-color: rbga(0,0,0,0);
+	width:40%;
+	height: 70%;
+	position: absolute;
+	left: 30%;
+	top: 10%;
+}
+.question-area .question{
+	animation-name: from-bot-to-top;
+	animation-duration: 0.5s;
+}
+.content{
+	background-color: #abcdef;
+	position: absolute;
+	padding-top: 10%;
+	height: 40%;
+	width: 100%;
+	font-size: 2em;
+	text-align: center;
+}
+.final-result{
+	background-color: #abcdef;
+	position: absolute;
+	padding-top: 10%;
+	padding-left: 5%;
+}
+.options{
+	background-color: white;
+	display: block;
+	position: absolute;
+	top: 40%;
+	height: 60%;
+	width: 100%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+.option{
+	width: 100%;
+	height: 25%;
+}
+.question-result{
+	padding-top: 3%;
+	background-color: green;
+	position: absolute;
+	width: 40%;
+	height: 40%;
+	top: 30%;
+	left: 30%;
+	color: white;
+	font-size: 7em;
+	text-align: center;
+	animation-name: zoom-in;
+	animation-duration: 0.4s;
+}
+.process_result{
+	background-color: #abcdef;
+	color: black;
+}
+.detail-result{
+	padding-top: 3%;
+	background-color: #abcdef;
+	color: black;
+	
+}
+.content-of-details{
+	overflow: auto;
+	height: 85%;
+}
+.content-of-details .item-detail{
+	padding-left: 3%;
+	background-color: white;
+	font-size: 1.5em;
+	border-bottom: 1px solid #abcdef;
+}
+.startbutton{
+	padding-top: 5px;
+	font-size: 3em;
+	background-color: #abcdef;
+   -webkit-box-shadow: 0 0 1px #666;
+   -moz-box-shadow: 0 0 1px #666;
+   box-shadow: 0 0 1px #666;
+	text-align: center;
+	color: #000;
+}
+.backbutton{
+	position: absolute;
+	top: 2%;
+	left: 2%;
+	width: 5%;
+	height: 5%;
+}
+.question-area button {
+	font-style: normal;
+	font-weight: lighter;
+	margin-top: -30px;
+	margin-left: -30px;
+	height: 60px;
+	width: 60px; 
+	border-radius : 100%;
+	background-color: white;
+	color: #000;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
+	text-align: center;
+	text-shadow: 0px 0px 0px rgba(0.9,0.9,0.9,1);
+	border: 2px solid;
+	border-color: #abcdef;
+	border-radius: 100%;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	animation-name: zoom-out;
+	animation-duration: 0.69s;
+}
+.startbutton:hover {
+	-webkit-box-shadow: 0 0 5px #777;
+   -moz-box-shadow: 0 0 5px #777;
+   box-shadow: 0 0 5px #777;
+   background-color: rgba(44,44,44,0.6);
+}
+input[type=radio]{
+	display:none;
+}
+input[type=radio] + label{
+	width: 100%;
+	height: 100%;
+	font-size: 1.5em;
+	padding-top: 20px;
+	font-style: normal;
+	font-weight: normal;
+	padding-left: 3%;
+	text-align: center;
+	vertical-align: center;
+	cursor: pointer;
+	background-color: #f5f5f5;
+	background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+	background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+	background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	}
+
+input[type=radio]:checked + label, input[type=checkbox]:checked + label{
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	background-color:#99ff99;
+	animation-name: option-color;
+	animation-duration: 1s;
+}
+@media screen and (max-width: 768px){
+	.bottom-area{
+	  width:100%;
+	  height:15%;
+	  left:0;
+	}
+	.backbutton{
+	  width: 15vw;
+	  height: 8vh;
+	}
+}
+
+

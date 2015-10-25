@@ -1,0 +1,91 @@
+[{
+	"id":"1",
+	"category":"Geography",
+	"content":"Where is Vietname?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":0
+},
+{
+	"id":"2",
+	"category":"Geography",
+	"content":"Where is France?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":1
+},
+{
+	"id":"3",
+	"category":"Geography",
+	"content":"Where is America?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":2
+},
+{
+	"id":"4",
+	"category":"Geography",
+	"content":"Where is America?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":2
+},
+{
+	"id":"5",
+	"category":"Geography",
+	"content":"Where is America?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":2
+},
+{
+	"id":"6",
+	"category":"Geography",
+	"content":"Where is America?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":2
+},
+{
+	"id":"7",
+	"category":"Geography",
+	"content":"Where is America?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":2
+},
+{
+	"id":"8",
+	"category":"Geography",
+	"content":"Where is America?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":2
+},
+{
+	"id":"9",
+	"category":"Geography",
+	"content":"Where is America?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":2
+},
+{
+	"id":"10",
+	"category":"Geography",
+	"content":"Where is America?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":2
+}
+]

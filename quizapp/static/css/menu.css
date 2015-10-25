@@ -1,0 +1,77 @@
+html, body{
+	overflow-x: hidden;
+}
+menu-item{
+	position:absolute;
+	width:16.67%;
+	height:28vh;
+	border: solid 3px #666;
+	padding: 0px !important;
+    margin: 0px !important;
+    animation-name: zoom-out-ver2;
+	animation-duration: 0.69s;
+}
+.fullscreen{
+	width:100vw;
+	height:100vh;
+}
+.fullcontainer{
+	width:100%;
+	height: 100%;
+}
+.inside-image{
+	width:80%;
+	height:80%;
+	position: absolute;
+	top:10%;
+}
+.nopadding {
+   padding: 0px 0px 0px 0px !important;
+}
+.large-height{
+	height:56vh;
+}
+.normal-height{
+	height:28vh;
+}
+
+.red{
+	background-color:#800000; ;
+}
+.purple{
+	background-color: #660066;
+}
+.yellow{
+	background-color: gold;
+}
+.blue{
+	background-color: #0080c0;
+}
+.green{
+    background-color: #006400;
+}
+.dark{
+    background-color: #2e2e2e;
+}
+.orange{
+	background-color: #ff8000; 
+}
+
+.profile{
+	background-color: #34495e;
+	height:16vh;
+	top:0;
+	right:0;
+	border-bottom: 3px solid #666666;
+}
+@media screen and (max-width: 768px){
+	.profile{
+	   height:20vw;
+	}
+	.large-height{
+	 height:33vw;
+    }
+    .normal-height{
+	 height:33vw;
+    }
+}

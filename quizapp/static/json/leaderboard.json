@@ -1,12 +1,12 @@
 [
-   { "name":"Superman","score":"300"},
-   { "name":"Spiderman","score":"200"},
-   { "name":"Hulk","score":"200"},
-   { "name":"Thor","score":"200"},
-   { "name":"Iron man","score":"200"},
-   { "name":"Batman","score":"190"},
-   { "name":"Wolverine","score":"100"},
-   { "name":"Joker","score":"100"},
-   { "name":"Dead Shot","score":"100"},
-   { "name":"Arrow","score":"100"}
+   { "name":"Superman","score":"300","avatar":"bo"},
+   { "name":"Spiderman","score":"200","avatar":"ho"},
+   { "name":"Hulk","score":"200","avatar":"lon"},
+   { "name":"Thor","score":"200","avatar":"lon"},
+   { "name":"Iron man","score":"200","avatar":"khi"},
+   { "name":"Batman","score":"190","avatar":"ho"},
+   { "name":"Wolverine","score":"100","avatar":"bo"},
+   { "name":"Joker","score":"100","avatar":"voi"},
+   { "name":"Dead Shot","score":"100","avatar":"voi"},
+   { "name":"Arrow","score":"100","avatar":"bo"}
 ]
