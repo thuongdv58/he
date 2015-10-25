@@ -20,19 +20,20 @@ menu-item{
 	height: 100%;
 }
 .inside-image{
-	width:80%;
+	max-width:100%;
 	height:80%;
 	position: absolute;
 	top:10%;
+	left:20%;
 }
 .nopadding {
    padding: 0px 0px 0px 0px !important;
 }
 .large-height{
-	height:56vh;
+	height:58vh;
 }
 .normal-height{
-	height:28vh;
+	height:29vh;
 }
 
 .red{
@@ -58,11 +59,11 @@ menu-item{
 }
 
 .profile{
+	position:absolute;
 	background-color: #34495e;
-	height:16vh;
-	top:0;
-	right:0;
-	border-bottom: 3px solid #666666;
+	height:13vh;
+	color: white;
+
 }
 @media screen and (max-width: 768px){
 	.profile{

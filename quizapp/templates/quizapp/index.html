@@ -16,36 +16,22 @@
         <link rel="stylesheet" type="text/css" href="static/css/hoverEffect.css"/>
         <link rel="stylesheet" type="text/css" href ="static/css/bootstrap.min.css"/
     </head>
-    {% if not request.user.is_authenticated %}<!------------------------------display when not login----------------------------->
+    {% if not request.user.is_authenticated %}
     <p>welcome to my website</p>
-    <a href="{% url 'auth_login' %}">Login</a><p> to answer or</p> <!------------------------------login-------------------->
+    <a href="{% url 'auth_login' %}">Login</a><p> to answer or</p>
     <a href="{% url 'registration_register' %}">Register a new account</a>
     {% endif %}
     {% block content %}
     </html>
-    {% if request.user.is_authenticated %}<!---------------------------------------------display when login------------------->
+    {% if request.user.is_authenticated %}
     <body ng-controller = "menuController" style="width:100%;padding: 0 0;margin:0">
 
         <div class="container-fluid" style="padding:0px;background-color:blue" ng-switch="option">
          
           <div ng-switch-when = "menu">
-             <div class = "profile col-md-12 col-xs-12 " style = "color: white;" ng-click="changeTo('profile')">
-                <div  class = "col-md-1 col-xs-3" style = "height:100%">  <!-- Space for avatar -->
-                  <img alt="avatar" src="static/img/avatar/avatar.png" class = "img-circle inside-image" >
-                </div>
-                <div class = "col-md-10 col-xs-6">   <!-- User name -->
-                 <span style="font-size: 2em;text-align: left;bottom: 0px;">{{user.name}}</span>
-                 <div style="font-size: 1.5em;text-align: left;bottom: 0px;height:40%">
-                   <span style = "bottom: 0px">Level: {{user.level}}</span>
-                   <span>Rank: {{user.rank}}</span>
-                     <a href="{% url 'auth_logout' %}">-----------------------Logout-------------------</a> <!---------------------------------------------LOGout-------------->
-                 </div>
-                 </div>
-                 <div class = "col-md-1 hidden-xs" style = "height:100%;top:0px" ng-click="changeTo('leaderboard')">
-                   <img alt="leaderboard" src="static/img/championcup.png" class = "inside-image">
-                 </div>
+             <div class = "col-md-12 nopadding profile">
+                <profile-bar></profile-bar>
              </div>
-             
              <div class = "col-md-4 col-xs-6 nopadding">
                 <menu-item class = "col-md-12 col-xs-12 large-height orange" item = "'General Knowledge'" ></menu-item>
                 <menu-item class = "col-md-6 col-xs-12 normal-height blue" item = "'Food & Drink'"></menu-item>
@@ -63,6 +49,8 @@
                 <menu-item class = "col-md-6 col-xs-6 normal-height purple" item = "'Movies'"></menu-item>
                 <menu-item class = "col-md-6 col-xs-6 normal-height orange" item = "'Random'"></menu-item>
              </div>
+
+             
           </div>
           <div class = "leaderboard" ng-switch-when = "leaderboard">
             <leaderboard></leaderboard>
@@ -73,6 +61,7 @@
           </div>
           <div class = "login" ng-switch-when = "profile">Hello this is profile</div>
         </div>
+
     </body><!---->
 </html>
 {%endif%}

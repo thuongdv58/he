@@ -1,0 +1,16 @@
+<div class = "fullcontainer" ng-click="changeTo('profile')" >
+    <div  class = "col-md-1 col-xs-3" style="height:100%;">  <!-- Space for avatar -->
+      <img ng-src = "static/images/{{user.avatar}}.jpg" class="inside-image">
+    </div>
+    <div class = "col-md-10 col-xs-6" style="height:100%;">   <!-- User name -->
+      <div style="font-size: 2em;text-align: left;padding-top:5px;height:50%;">{{user.name}}</div>
+      <div style="font-size: 1.5em;text-align: left;padding-top:5px;height:50%;">
+        <span style = "bottom: 0px">Level: {{user.level}}</span>
+        <span>Rank: {{user.rank}}</span>
+        <a href="http://127.0.0.1:8000/accounts/logout/">logout</a>
+      </div>
+    </div>
+    <div class = "col-md-1 hidden-xs" style = "height:100%;" ng-click="changeTo('leaderboard')">
+      <img alt="leaderboard" src="static/img/championcup.png" class = "inside-image">
+    </div>
+</div>

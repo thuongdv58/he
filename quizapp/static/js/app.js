@@ -11,13 +11,13 @@ app.run(function($rootScope) {
     
 	
 });
-app.controller('menuController',  ['$scope','$rootScope','$http',function($scope,$rootScope,$http){
+app.controller('menuController', ['$scope','$rootScope','$http',function($scope,$rootScope,$http){
 	$scope.user = {
 		name: "hello",
 		kick: "hello",
 		score: 10
 	};
-}]);
+}] );
 
 app.directive('menuItem',function(){
 	return{
@@ -38,11 +38,8 @@ app.directive("startupScreen",function(){
 	return{
 		restrict: "E",
 		controller: ['$scope','$rootScope','$http','$interval',function($scope,$rootScope,$http,$interval){
-			$scope.userScore = 0;
 			$scope.inProcess = false;
 			$scope.isAnswering = false;
-			$scope.userAnswer = "";
-			$scope.addPoint = 0;
 			$scope.backToMenu = function(){
 				$rootScope.option = "menu";
 			};
@@ -53,7 +50,7 @@ app.directive("startupScreen",function(){
 				$scope.isAnswering = true;
 				$scope.addPoint = 0;
 				$scope.results = [];
-				
+				$scope.userScore = 0;
 				$scope.timer = null;
 				$scope.userAnswers = [];
 				$scope.userAnswers[0] = -1;
@@ -112,7 +109,7 @@ app.directive("startupScreen",function(){
 		},
 		templateUrl: 'static/startup-screen.html'
 	}
-})
+});
 app.directive('leaderboard',function(){
 	return{
 		restrict: "E",
@@ -122,9 +119,20 @@ app.directive('leaderboard',function(){
 			});
 			$scope.backToMenu = function(){
 				$rootScope.option = "menu";
-			}
+			};
 			
 		}],
 		templateUrl: 'static/leaderboard.html'
 	};
-})
+});
+app.directive('profileBar',function(){
+	return{
+		restrict: "E",
+		controller: ['$scope','$rootScope','$http',function($scope,$rootScope,$http){
+			$http.get('static/json/userinfo.json').success(function(data) {
+				$scope.user = data;
+			});
+		}],
+		templateUrl: 'static/profile-bar.html'
+	}
+});

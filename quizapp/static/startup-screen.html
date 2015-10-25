@@ -33,10 +33,14 @@
       <div class = "content-of-details">
         <div class = "item-detail" ng-repeat = "result in results track by $index">
           <p>{{($index+1) +". "+ questions[$index].content}}</p>
-          <p>{{questions[$index].options[userAnswers[$index]]}}
-            <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-if="result=='danger'"></span>
-            <span class="glyphicon glyphicon-ok" aria-hidden="true" ng-if="result!='danger'"></span>
+          <p style="font-style: italic;">{{questions[$index].options[userAnswers[$index]]}}
+            <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-if="result=='danger'" style = "color:red;"></span>
+            <span class="glyphicon glyphicon-ok" aria-hidden="true" ng-if="result!='danger'" style = "color:green;"></span>
           </p>
+          <b>
+            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true" style = "color:black;">&nbsp</span>
+            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" style = "color:black;"></span>
+          </b>
         </div>
       </div>
       <button style = "position:absolute;top: 15%;left: 90%;" type = "button"><span class="glyphicon glyphicon-ok" aria-hidden="true" ng-click = "resetProcess()"></span></button>
@@ -57,7 +61,7 @@
           <div class = "col-md-2">
             <img ng-src = "static/images/ho.jpg" alt = "" height="100" width = "100" style = "padding-top:10%;" class="img-responsive">
           </div>
-          <div class = "col-md-8" style = "text-align: left;font-size:1.5em;">
+          <div class = "col-md-8" style = "text-align: left;font-size:1.8em;">
             <div style = "height:50%"><p>{{category}}</p>
             </div>
             <div style = "height:50%"><p>{{(currentQuestion+1)+"/10"}}</p>
