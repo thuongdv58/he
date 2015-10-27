@@ -1,0 +1,91 @@
+[{
+	"id":"1",
+	"category":"General Knowledge",
+	"content":"Where is Vietname?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":0
+},
+{
+	"id":"2",
+	"category":"General Knowledge",
+	"content":"What is capital city of China?",
+	"options":[
+		"Paris","New York","Beijing","HongKong"
+	],
+	"answer":2
+},
+{
+	"id":"3",
+	"category":"General Knowledge",
+	"content":"What is the highest place?",
+	"options":[
+		"Everest","Red Sea","Phanxipang","North Pole"
+	],
+	"answer":0
+},
+{
+	"id":"4",
+	"category":"General Knowledge",
+	"content":"What is Himalaya?",
+	"options":[
+		"Cave","Sea","Country","Mountains"
+	],
+	"answer":3
+},
+{
+	"id":"5",
+	"category":"General Knowledge",
+	"content":"Where is Congo?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":3
+},
+{
+	"id":"6",
+	"category":"General Knowledge",
+	"content":"Where is America?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":2
+},
+{
+	"id":"7",
+	"category":"General Knowledge",
+	"content":"Where is Ha noi?",
+	"options":[
+		"Laos","Vietnam","Korea","Cambodia"
+	],
+	"answer":1
+},
+{
+	"id":"8",
+	"category":"General Knowledge",
+	"content":"Which country has the largest population?",
+	"options":[
+		"Laos","China","America","Russia"
+	],
+	"answer":1
+},
+{
+	"id":"9",
+	"category":"General Knowledge",
+	"content":"What is capital city of China?",
+	"options":[
+		"Paris","New York","Beijing","HongKong"
+	],
+	"answer":2
+},
+{
+	"id":"10",
+	"category":"General Knowledge",
+	"content":"Where is Vietnam?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":0
+}
+]

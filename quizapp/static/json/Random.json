@@ -1,0 +1,94 @@
+[{
+	"id":"1",
+	"category":"History",
+	"content": "What U.S. President committed an unpardonable sin by kissing the Queen Mother on the lips?",
+    "options": [
+        "George W. Bush",
+        "Jimmy Carter",
+        "Barack Obama",
+        "Lyndon B. Johnson"
+    ],
+    "answer": 1
+},
+{
+	"id":"2",
+	"category":"History",
+	"content":"What is capital city of China?",
+	"options":[
+		"Paris","New York","Beijing","HongKong"
+	],
+	"answer":2
+},
+{
+	"id":"3",
+	"category":"History",
+	"content":"What is the highest place?",
+	"options":[
+		"Everest","Red Sea","Phanxipang","North Pole"
+	],
+	"answer":0
+},
+{
+	"id":"4",
+	"category":"History",
+	"content":"What is Himalaya?",
+	"options":[
+		"Cave","Sea","Country","Mountains"
+	],
+	"answer":3
+},
+{
+	"id":"5",
+	"category":"History",
+	"content":"Where is Congo?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":3
+},
+{
+	"id":"6",
+	"category":"History",
+	"content":"Where is America?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":2
+},
+{
+	"id":"7",
+	"category":"History",
+	"content":"Where is Ha noi?",
+	"options":[
+		"Laos","Vietnam","Korea","Cambodia"
+	],
+	"answer":1
+},
+{
+	"id":"8",
+	"category":"History",
+	"content":"Which country has the largest population?",
+	"options":[
+		"Laos","China","America","Russia"
+	],
+	"answer":1
+},
+{
+	"id":"9",
+	"category":"History",
+	"content":"What is capital city of China?",
+	"options":[
+		"Paris","New York","Beijing","HongKong"
+	],
+	"answer":2
+},
+{
+	"id":"10",
+	"category":"History",
+	"content":"Where is Vietnam?",
+	"options":[
+		"Asia","Europe","America","Africa"
+	],
+	"answer":0
+}
+]
