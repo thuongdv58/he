@@ -10,38 +10,38 @@
 {
 	"id":"2",
 	"category":"Geography",
-	"content":"Where is France?",
+	"content":"1 + 1 = ?",
 	"options":[
-		"Asia","Europe","America","Africa"
+		"1","2","3","4"
 	],
 	"answer":1
 },
 {
 	"id":"3",
 	"category":"Geography",
-	"content":"Where is America?",
+	"content":"Where is the highest place",
 	"options":[
-		"Asia","Europe","America","Africa"
+		"Everest","Red Sea","Phanxipang","North Pole"
 	],
-	"answer":2
+	"answer":0
 },
 {
 	"id":"4",
 	"category":"Geography",
-	"content":"Where is America?",
+	"content":"What is Himalaya",
 	"options":[
-		"Asia","Europe","America","Africa"
+		"Cave","Sea","Country","Mountains"
 	],
-	"answer":2
+	"answer":3
 },
 {
 	"id":"5",
 	"category":"Geography",
-	"content":"Where is America?",
+	"content":"Where is Congo?",
 	"options":[
 		"Asia","Europe","America","Africa"
 	],
-	"answer":2
+	"answer":3
 },
 {
 	"id":"6",
@@ -55,34 +55,34 @@
 {
 	"id":"7",
 	"category":"Geography",
-	"content":"Where is America?",
+	"content":"Where is Ha noi?",
 	"options":[
-		"Asia","Europe","America","Africa"
+		"Laos","Vietnam","Korea","Cambodia"
 	],
-	"answer":2
+	"answer":1
 },
 {
 	"id":"8",
 	"category":"Geography",
-	"content":"Where is America?",
+	"content":"Which country has the largest population?",
 	"options":[
-		"Asia","Europe","America","Africa"
+		"Laos","China","America","Russia"
 	],
-	"answer":2
+	"answer":1
 },
 {
 	"id":"9",
 	"category":"Geography",
-	"content":"Where is America?",
+	"content":"What is capital city of China?",
 	"options":[
-		"Asia","Europe","America","Africa"
+		"Paris","New York","Beijing","HongKong"
 	],
 	"answer":2
 },
 {
 	"id":"10",
 	"category":"Geography",
-	"content":"Where is America?",
+	"content":"Where is Vietnam?",
 	"options":[
 		"Asia","Europe","America","Africa"
 	],
