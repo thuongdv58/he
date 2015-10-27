@@ -10,16 +10,16 @@
 {
 	"id":"2",
 	"category":"Geography",
-	"content":"1 + 1 = ?",
+	"content":"What is capital city of China?",
 	"options":[
-		"1","2","3","4"
+		"Paris","New York","Beijing","HongKong"
 	],
-	"answer":1
+	"answer":2
 },
 {
 	"id":"3",
 	"category":"Geography",
-	"content":"Where is the highest place",
+	"content":"What is the highest place?",
 	"options":[
 		"Everest","Red Sea","Phanxipang","North Pole"
 	],
@@ -28,7 +28,7 @@
 {
 	"id":"4",
 	"category":"Geography",
-	"content":"What is Himalaya",
+	"content":"What is Himalaya?",
 	"options":[
 		"Cave","Sea","Country","Mountains"
 	],
@@ -86,6 +86,6 @@
 	"options":[
 		"Asia","Europe","America","Africa"
 	],
-	"answer":2
+	"answer":0
 }
 ]

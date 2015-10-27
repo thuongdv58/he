@@ -1,6 +1,9 @@
 html, body{
 	overflow-x: hidden;
 }
+.menu{
+	overflow: hidden;
+}
 menu-item{
 	position:absolute;
 	width:16.67%;
@@ -35,7 +38,39 @@ menu-item{
 .normal-height{
 	height:29vh;
 }
-
+.gk{
+	background-color: #FF5C5C; ;
+}
+.fd{
+	background-color: #19D1A3;
+}
+.sp{
+	background-color: #FF8533;
+}
+.an{
+    background-color: #FF4D4D;
+}
+.geo{
+   background-color: #FFFFA3;
+}
+.hi{
+	background-color: #CC33FF; 
+}
+.sci{
+	background-color: #FFFF66; 
+}
+.ms{
+	background-color: #CC33FF;
+}
+.en{
+	background-color:#70DBFF; 
+}
+.mv{
+	background-color: #00FF99; 
+}
+.rd{
+	background-color: #479191; 
+}
 .red{
 	background-color:#800000; ;
 }
