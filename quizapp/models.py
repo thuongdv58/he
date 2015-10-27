@@ -24,20 +24,33 @@ class Account(AbstractBaseUser):
 
     def __unicode__(self):
         return self.email
+class avatar(models.Model):
+    avatar=models.TextField(max_length=50)
+    user=models.ManyToManyField(User)
+    def __unicode__(self):
+        return self.avatar
 class user_infor(models.Model):
-    user=models.ForeignKey(User)
+    user=models.OneToOneField(User,primary_key=True)
     score=models.IntegerField(default=0)
-
+    rank=models.IntegerField(default=0)
+    def __unicode__(self):
+        return '{0},{1}'.format(self.rank,self.score)
+class questionType(models.Model):
+    type=models.TextField(max_length=50)
+    def __unicode__(self):
+        return self.type
+class answer(models.Model):
+    answer=models.CharField(max_length=1,default='A')
+    def  __unicode__(self):
+        return "{0}".format(self.answer)
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
-    question_type = models.CharField(max_length=50)
+    question_type = models.ForeignKey(questionType)
+    answer1=models.TextField(max_length=200)
+    answer2=models.TextField(max_length=200)
+    answer3=models.TextField(max_length=200)
+    answer4=models.TextField(max_length=200)
+    answer=models.ForeignKey(answer)
     pub_date = models.DateTimeField('date published')
     def __unicode__(self):
         return self.question_text
-
-class Choice(models.Model):
-    question = models.ForeignKey(Question)
-    choice_text = models.CharField(max_length=200)
-    isAnswer = models.BooleanField(default=False)
-    def __unicode__(self):
-        return self.choice_text
