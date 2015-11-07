@@ -54,7 +54,7 @@ app.directive("startupScreen",function(){
 				$scope.timer = null;
 				$scope.userAnswers = [];
 				$scope.userAnswers[0] = -1;
-				$http.get('static/json/'+$rootScope.category+'.json').success(function(data) {
+				$http.get('getquestionlist/sports').success(function(data) {
 			        $scope.questions = data;
 			    });
 			};

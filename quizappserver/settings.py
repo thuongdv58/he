@@ -182,6 +182,7 @@ REGISTRATION_AUTO_LOGIN=True
 CRISPY_TEMPLATE_PACK= 'bootstrap3'
 SITE_ID=1
 LOGIN_REDIRECT_URL='/'
+SEND_ACTIVATION_EMAIL=False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 STATIC_URL = '/static/'
