@@ -58,6 +58,20 @@ class answer(models.Model):
         return "{0}".format(self.answer)
 
 
+class single_answer(models.Model):
+    answer = models.IntegerField(max_length=1, default=0)
+
+    def __unicode__(self):
+        return str(self.answer)
+
+
+class multi_answer(models.Model):
+    answer = models.IntegerField(default=0)
+
+    def __unicode__(self):
+        return "{0}".format(self.answer)
+
+
 class category(models.Model):
     category = models.TextField(max_length=50, default="")
 
@@ -69,13 +83,34 @@ class Question(models.Model):
     question_text = models.CharField(max_length=200)
     question_type = models.ForeignKey(questionType)
     category = models.ForeignKey(category)
-    rate=models.IntegerField(default=0)
-    answer1 = models.TextField(max_length=200)
-    answer2 = models.TextField(max_length=200)
-    answer3 = models.TextField(max_length=200)
-    answer4 = models.TextField(max_length=200)
-    answer = models.ForeignKey(answer)
+    rate = models.IntegerField(default=0)
     pub_date = models.DateTimeField('date published', default=datetime.now())
+    answer = models.ForeignKey(answer,default=1)
+    single_answer = models.ForeignKey(single_answer, default=1)
+    multi_select_answer = models.ManyToManyField(multi_answer,blank=True)
+    true_false_choice = models.BooleanField(choices=((False, 'False'), (True, 'True')), default=True)
+    fill_blank_answer = models.CharField(max_length=100, blank=True)
+    max = models.IntegerField(default=0)
+    min = models.IntegerField(default=0)
+    picker_answer = models.IntegerField(default=0)
+    fill_two_blank1 = models.CharField(max_length=50, blank=True)
+    fill_two_blank2 = models.CharField(max_length=50, blank=True)
 
     def __unicode__(self):
         return self.question_text
+
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question)
+    choice_text = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.choice_text
+
+
+class toggle_choice(models.Model):
+    ob = models.CharField(max_length=30)
+    answer = models.CharField(max_length=30)
+
+    def __unicode__(self):
+        return '{0},{1}'.format(self.ob, self.answer)

@@ -6,6 +6,7 @@
         <list>
           <option value="quizapp.forms" />
           <option value="django.core.serializers.json.loads" />
+          <option value="str.__or__" />
         </list>
       </option>
     </inspection_tool>

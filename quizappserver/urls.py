@@ -20,6 +20,6 @@ from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^',include("quizapp.urls")),
-    #url(r'', include('social_auth.urls')),
-    url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'', include('social_auth.urls')),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
 ]
