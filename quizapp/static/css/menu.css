@@ -22,6 +22,12 @@ menu-item{
 	width:100%;
 	height: 100%;
 }
+.fullheight{
+	height: 100%;
+}
+.haftheight{
+	height: 50%;
+}
 .inside-image{
 	max-width:100%;
 	height:80%;
@@ -32,44 +38,15 @@ menu-item{
 .nopadding {
    padding: 0px 0px 0px 0px !important;
 }
+.topbotpadding {
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
 .large-height{
 	height:58vh;
 }
 .normal-height{
 	height:29vh;
-}
-.gk{
-	background-color: #FF5C5C; ;
-}
-.fd{
-	background-color: #19D1A3;
-}
-.sp{
-	background-color: #FF8533;
-}
-.an{
-    background-color: #FF4D4D;
-}
-.geo{
-   background-color: #FFFFA3;
-}
-.hi{
-	background-color: #CC33FF; 
-}
-.sci{
-	background-color: #FFFF66; 
-}
-.ms{
-	background-color: #CC33FF;
-}
-.en{
-	background-color:#70DBFF; 
-}
-.mv{
-	background-color: #00FF99; 
-}
-.rd{
-	background-color: #479191; 
 }
 .red{
 	background-color:#800000; ;
@@ -99,6 +76,20 @@ menu-item{
 	height:13vh;
 	color: white;
 
+}
+.chosen{
+	border: 3px groove #7777ee;
+}
+.active{
+	color: blue;
+}
+.unactive{
+	color: gray;
+}
+.no-bg-color{
+	background:none !important;
+	padding: none;
+	border: none !important;
 }
 @media screen and (max-width: 768px){
 	.profile{

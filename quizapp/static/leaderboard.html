@@ -1,5 +1,5 @@
-<div class = "bg-danger" >
-   <div class="btn btn-default btn-lg"  ng-click = "backToMenu()">
+<div class = "fullcontainer" >
+   <div class="btn btn-default btn-lg no-bg-color"  ng-click = "backToMenu()">
      <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
   </div>
    <div class= "row">
@@ -15,13 +15,12 @@
 	         <td colspan="1"><h3>{{($index+1)}}.</h3></td>
 	         <td colspan="1">
 	          	<a href="#">
-				<img ng-src = "static/images/{{player.avatar}}.jpg" alt = "" height="50" width = "50" class="img-responsive img-rounded">
+				<img ng-src = "static/images/{{player.avatar}}.png" alt = "" height="50" width = "50" class="img-responsive img-rounded">
                	</a>
 	           
 	         </td>
-	         <td colspan="4"><h3>{{player.name}}</h3></td>
-	         <td colspan="2"><h3>300</h3></td>
-	         <td colspan="1"><h3>200</h3></td>
+	         <td colspan="5"><h3>{{player.name}}</h3></td>
+	         <td colspan="2"><h3>{{player.score}}</h3></td>
 	     </tr>
       </table>
       </div>

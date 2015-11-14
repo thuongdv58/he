@@ -1,4 +1,7 @@
-
+.startupscreen{
+	background-position: 50% 50%;
+	background-size: fixed;
+}
 .bottom-area{
 	color: white;
 	background-color: #abcdef;
@@ -26,8 +29,6 @@
 	padding-top: 10%;
 	height: 40%;
 	width: 100%;
-	font-size: 2em;
-	text-align: center;
 }
 .final-result{
 	background-color: #abcdef;
@@ -42,12 +43,20 @@
 	top: 40%;
 	height: 60%;
 	width: 100%;
-	padding-top: 3%;
-	padding-bottom: 3%;
+	padding-top: 5%;
+	padding-bottom: 5%;
 }
 .option{
 	width: 100%;
 	height: 25%;
+}
+.fill-blank{
+	font-size: 1.7em;
+	
+}
+.center-vertical{
+	display: flex;
+    align-items: center;
 }
 .question-result{
 	padding-top: 3%;
@@ -100,7 +109,7 @@
 	width: 5%;
 	height: 5%;
 }
-.question-area button {
+.confirm-button {
 	font-style: normal;
 	font-weight: lighter;
 	margin-top: -30px;
@@ -177,6 +186,13 @@ input[type=radio]:checked + label, input[type=checkbox]:checked + label{
 	  width: 15vw;
 	  height: 8vh;
 	}
+	.question-area{
+	width:100%;
+	height: 85%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
 }
 
 
