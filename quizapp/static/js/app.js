@@ -199,15 +199,15 @@ app.directive("startupScreen",function(){
 			}
 			$scope.postVote = function(){
 				$scope.voteData = {
-					votelist: [],
-					dislike: []
+					votelist: '12,13',
+					dislike:'10'
 				};
-				for(var i = 0;i<$scope.likes.length;i++){
-					$scope.voteData.votelist[i] = $scope.likes[i].toString();
-				}
-				for(var i = 0;i<$scope.dislikes.length;i++){
-					$scope.voteData.dislike[i] = $scope.dislikes[i].toString();
-				}
+				//for(var i = 0;i<$scope.likes.length;i++){
+				//	$scope.voteData.votelist[i] = $scope.likes[i].toString();
+				//}
+				//for(var i = 0;i<$scope.dislikes.length;i++){
+				//	$scope.voteData.dislike[i] = $scope.dislikes[i].toString();
+				//}
 				$http({
 					method: 'POST',
 					url: '/questionrate/',

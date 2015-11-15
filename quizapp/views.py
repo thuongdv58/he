@@ -40,44 +40,44 @@ def get_question_list(request, category):
             question['content'] = quest.question_text
             type = quest.question_type
             questtype = type.type
-            question['type']=questtype
-            if(questtype=='four-quarter'):
-                answer=quest.answer
-                question['answer']=int(answer.answer)
-                options=[]
-                choices=Choice.objects.filter(question=quest)
+            question['type'] = questtype
+            if (questtype == 'four-quarter'):
+                answer = quest.answer
+                question['answer'] = int(answer.answer)
+                options = []
+                choices = Choice.objects.filter(question=quest)
                 for choice in choices:
                     options.append(choice.choice_text)
-                question['options']=options
-            if questtype=='single-select' or category=='single-select-item':
-                answer=quest.single_answer
-                question['answer']=answer.answer
-                options=[]
-                choices=Choice.objects.filter(question=quest)
+                question['options'] = options
+            if questtype == 'single-select' or category == 'single-select-item':
+                answer = quest.single_answer
+                question['answer'] = answer.answer
+                options = []
+                choices = Choice.objects.filter(question=quest)
                 for choice in choices:
                     options.append(choice.choice_text)
-                question['options']=options
-            if(questtype=='multi-select'):
-                answer=[]
-                answerlist=quest.multi_select_answer.all()
+                question['options'] = options
+            if (questtype == 'multi-select'):
+                answer = []
+                answerlist = quest.multi_select_answer.all()
                 for ans in answerlist:
                     answer.append(ans.answer)
-                question['answer']=answer
-                options=[]
-                choices=Choice.objects.filter(question=quest)
+                question['answer'] = answer
+                options = []
+                choices = Choice.objects.filter(question=quest)
                 for choice in choices:
                     options.append(choice.choice_text)
-                question['options']=options
-            if(questtype=='fill-two-blanks'):
-                question['answer']=[quest.fill_two_blank1,quest.fill_two_blank2]
-            if(questtype=='true-false'):
-                question['answer']=quest.true_false_choice
-            if(questtype=='fill-blank'):
-                question['answer']=quest.fill_blank_answer
-            if(questtype=='picker'):
-                question['max']=quest.max
-                question['min']=quest.min
-                question['answer']=quest.picker_answer
+                question['options'] = options
+            if (questtype == 'fill-two-blanks'):
+                question['answer'] = [quest.fill_two_blank1, quest.fill_two_blank2]
+            if (questtype == 'true-false'):
+                question['answer'] = quest.true_false_choice
+            if (questtype == 'fill-blank'):
+                question['answer'] = quest.fill_blank_answer
+            if (questtype == 'picker'):
+                question['max'] = quest.max
+                question['min'] = quest.min
+                question['answer'] = quest.picker_answer
             questionlist.append(question)
         return JsonResponse(questionlist, safe=False)
     except ObjectDoesNotExist:
@@ -171,12 +171,24 @@ def update_question_rate(request):
     if request.method == 'POST':
         questionlist = request.POST['votelist']
         dislikelist=request.POST['dislike']
+        questionlist=str(questionlist)
+        questionlist=questionlist.split(',')
         for quest in questionlist:
-            question = Question.objects.get(pk=int(quest))
-            question.rate = question.rate + 1
+            try:
+                question = Question.objects.get(pk=int(quest))
+                question.rate += 1
+                question.save()
+            except ObjectDoesNotExist:
+                raise Exception('not have this question id')
+        dislikelist=str(dislikelist)
+        dislikelist=dislikelist.split(',')
         for quest in dislikelist:
-            question = Question.objects.get(pk=int(quest))
-            question.rate -= 1
+            try:
+                question = Question.objects.get(pk=int(quest))
+                question.rate -= 1
+                question.save()
+            except ObjectDoesNotExist:
+                raise Exception('not have this question id')
         return HttpResponse({'success': 'ok'}, content_type='application/json')
     else:
         raise Exception('f*** you! just post not get ok!')
