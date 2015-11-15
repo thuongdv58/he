@@ -189,6 +189,6 @@ def update_question_rate(request):
                 question.save()
             except ObjectDoesNotExist:
                 raise Exception('not have this question id')
-        return HttpResponse({'success': 'ok'}, content_type='application/json')
+        return HttpResponse({}, content_type='application/json')
     else:
         raise Exception('f*** you! just post not get ok!')

@@ -9,7 +9,7 @@ var normalizeText = function(text){
 	}
 	return text.toLowerCase();
 }
-var maxQuestion = 2;
+var maxQuestion = 9;
 //config http provider to post easyly
 app.config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
@@ -155,8 +155,7 @@ app.directive("startupScreen",function(){
 	        			return str.join("&");
     				},
 					data: $scope.data
-				}).success(function(data){
-				});
+				}).then();
 			};
 			$scope.resetProcess = function(){
 				$scope.inProcess = false;
@@ -199,15 +198,11 @@ app.directive("startupScreen",function(){
 			}
 			$scope.postVote = function(){
 				$scope.voteData = {
-					votelist: '12,13',
-					dislike:'10'
+					votelist: '',
+					dislike:''
 				};
-				//for(var i = 0;i<$scope.likes.length;i++){
-				//	$scope.voteData.votelist[i] = $scope.likes[i].toString();
-				//}
-				//for(var i = 0;i<$scope.dislikes.length;i++){
-				//	$scope.voteData.dislike[i] = $scope.dislikes[i].toString();
-				//}
+				$scope.voteData.votelist = $scope.likes.join();
+				$scope.voteData.dislike = $scope.dislikes.join();
 				$http({
 					method: 'POST',
 					url: '/questionrate/',
@@ -219,7 +214,7 @@ app.directive("startupScreen",function(){
 	        			return str.join("&");
     				},
 					data: $scope.voteData
-				}).success();
+				}).then();
 				$scope.resetProcess();
 			}
 			$scope.getColorClass = function(array,id){

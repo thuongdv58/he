@@ -2,6 +2,9 @@
 	background-position: 50% 50%;
 	background-size: fixed;
 }
+.white-text{
+	color: white;
+}
 .bottom-area{
 	color: white;
 	background-color: #abcdef;
@@ -192,7 +195,10 @@ input[type=radio]:checked + label, input[type=checkbox]:checked + label{
 	position: absolute;
 	left: 0;
 	top: 0;
-}
+	}
+	.question-area .question{
+		animation-duration: 0s;
+	}
 }
 
 
