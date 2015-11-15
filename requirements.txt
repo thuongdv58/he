@@ -1,5 +1,4 @@
 Django>=1.8.4
 Python==2.7.10
-sqlite3==3.8.11.1
 django-social-auth
 django-registration-redux
