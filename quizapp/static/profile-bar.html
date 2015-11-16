@@ -1,10 +1,23 @@
-<div class = "fullcontainer" ng-click="changeTo('profile')" >
+<div class = "fullcontainer" >
     <div class = "col-md-1 col-xs-3 center-vertical" style="height:100%;">  <!-- Space for avatar -->
         <img ng-src = "static/images/{{user.avatar}}.png" class="img-responsive img-circle">
     </div>
     <div class = "col-md-10 col-xs-9 fullheight center-vertical">   <!-- User name -->
-        <h1>{{user.firstname+" "+user.lastname}}</h1>
-    </div>
+       
+      <!-- Split button -->
+		<div class="btn-group">
+		  <button type="button" class="btn btn-danger btn-lg no-bg-color"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h2>{{user.firstname +' '+ user.lastname+ " "}}<span class="caret"></h2></button>
+		  <button type="button" class="btn btn-danger dropdown-toggle btn-lg no-bg-color">
+		    <span class="sr-only">Toggle Dropdown</span>
+		  </button>
+		  <ul class="dropdown-menu bg-info">
+		    <li><a href="#" ng-click = "changeTo('profile')"><h4>View profile</h4></a></li>
+		    <li><a href="http://127.0.0.1:8000/accounts/password/change/"><h4>Change password</h4></a></li>
+		    <li role="separator" class="divider"></li>
+		    <li><a href="http://127.0.0.1:8000/accounts/logout/"><h4>Log out</h4></a></li>
+		  </ul>
+		</div>
+	</div>
     <div class = "col-md-1 hidden-xs fullheight" ng-click="changeTo('leaderboard')">
        <img alt="leaderboard" src="static/img/championcup.png" class = "inside-image">
     </div>
