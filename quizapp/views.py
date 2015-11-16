@@ -33,7 +33,10 @@ def get_question_list(request, category):
     try:
         questionlist = []
         lists = \
-            Question.objects.filter(category__category__icontains=category)[:10]
+            Question.objects.filter(category__category__icontains=category).order_by('?')[:10]
+        if category=='random':
+            lists = \
+                Question.objects.all().order_by('?')[:10]
         for quest in lists:
             question = {}
             question['id'] = quest.pk
@@ -96,14 +99,7 @@ def get_user_info(request):
         response['avatar'] = tem.avatar
         return JsonResponse(response)
     except:
-        user = user_infor.objects.create(user=request.user)
-        response = {}
-        tem = user.user
-        response['firstname'] = tem.first_name
-        response['lastname'] = tem.last_name
-        tem = user.avatar
-        response['avatar'] = tem.avatar
-        return JsonResponse(response)
+        return JsonResponse({'firstname':'unknow','lastname':'unknow','avatar':'dog'})
 
 
 @login_required(login_url='/login')
