@@ -43,10 +43,10 @@ menu-item{
 	padding-top: 5px;
 }
 .large-height{
-	height:58vh;
+	height:60vh;
 }
 .normal-height{
-	height:29vh;
+	height:30vh;
 }
 .red{
 	background-color:#800000; ;
@@ -73,7 +73,7 @@ menu-item{
 .profile{
 	position:absolute;
 	background-color: #34495e;
-	height:13vh;
+	height:10vh;
 	color: white;
 
 }
@@ -93,7 +93,7 @@ menu-item{
 }
 @media screen and (max-width: 768px){
 	.profile{
-	   height:20vw;
+	   height:15vw;
 	}
 	.large-height{
 	 height:33vw;

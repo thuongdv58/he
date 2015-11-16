@@ -1,12 +1,12 @@
 <div class = "fullcontainer" >
-    <div class = "col-md-1 col-xs-3 center-vertical" style="height:100%;">  <!-- Space for avatar -->
-        <img ng-src = "static/images/{{user.avatar}}.png" class="img-responsive img-circle">
+    <div class = "col-md-1 col-xs-2 topbotpadding fullheight" >  <!-- Space for avatar -->
+        <img ng-src = "static/images/{{user.avatar}}.png" class="inside-image">
     </div>
-    <div class = "col-md-10 col-xs-9 fullheight center-vertical">   <!-- User name -->
+    <div class = "col-md-10 col-xs-10 fullheight center-vertical">   <!-- User name -->
        
       <!-- Split button -->
 		<div class="btn-group">
-		  <button type="button" class="btn btn-danger btn-lg no-bg-color"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h2>{{user.firstname +' '+ user.lastname+ " "}}<span class="caret"></h2></button>
+		  <button type="button" class="btn btn-danger btn-lg no-bg-color fullheight"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h3>{{user.firstname +' '+ user.lastname+ " "}}<span class="caret"></h3></button>
 		  <button type="button" class="btn btn-danger dropdown-toggle btn-lg no-bg-color">
 		    <span class="sr-only">Toggle Dropdown</span>
 		  </button>
@@ -18,7 +18,7 @@
 		  </ul>
 		</div>
 	</div>
-    <div class = "col-md-1 hidden-xs fullheight" ng-click="changeTo('leaderboard')">
+    <div class = "col-md-1 visible-md visible-lg fullheight" ng-click="changeTo('leaderboard')">
        <img alt="leaderboard" src="static/img/championcup.png" class = "inside-image">
     </div>
 </div>

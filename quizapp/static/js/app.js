@@ -181,6 +181,11 @@ app.directive("startupScreen",function(){
 						if($scope.questions[$scope.currentQuestion].answer[i]!=$scope.userAnswers[$scope.currentQuestion][i]) return false;
 					return true;
 				}
+				else if($scope.questions[$scope.currentQuestion].type=='fill-two-blanks'){
+					for(i = 0;i<$scope.questions[$scope.currentQuestion].answer.length;i++)
+						if($scope.questions[$scope.currentQuestion].answer[i]!=$scope.userAnswers[$scope.currentQuestion][i]) return false;
+					return true;
+				}
 				else{
 					if($scope.userAnswers[$scope.currentQuestion]==$scope.questions[$scope.currentQuestion].answer) return true;
 					else return false;
