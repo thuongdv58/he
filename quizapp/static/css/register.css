@@ -1,0 +1,10 @@
+	h2{
+		font-weight: bold;
+	}
+	.helptext{
+		font-size: 90%;
+	}
+	.google{
+		margin-left: 15%;
+		position: absolute;
+	}

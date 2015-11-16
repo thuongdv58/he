@@ -1,26 +1,45 @@
 {% extends "base.html" %}
 {% load i18n %}
-
+{% load staticfiles %}
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}"/>
 <div class='row'>
-<div class='col-sm-6 col-sm-offset-3'>
-<h1>Register for free!</h1>
-<form method="post" action=".">
-  {%csrf_token%}
-<div>
-{{ form.as_p }}
+	<div class='col-sm-6 col-sm-offset-3'>
+			<!-- Creat form sign up for website-->
+		<div class ='panel panel-primary'>
+			<div class="panel panel-heading">
+				<h1 class="panel-title">Sign up</h1>
+			</div>
+			<div  class="panel-body">
+				<h1>Register for free!</h1>
+				<form method="post" action=".">
+					{%csrf_token%}
+					<div>
+					{{ form.as_p }}
+					</div>
+					<p>By clicking on "Create an account" below.</p>
+					<input class='btn btn-success' type="submit" value="Creat an account"/> <!-- create account -->
+					<hr>
+					<p>You can also sign up with Facebook or Google+.</p>
+					<a class="facebook" href="{% static '/login/facebook'%}"><img src="/static/img/signup-fb.png" width="44%"></a> <!--sign up with facebook-->
+					<a class="google" href="{% static '/login/google'%}"><img src="/static/img/Google+_icon.png" width="80%"></a> <!--sign up with google+ -->
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
-  <input class='btn btn-block btn-primary' type="submit" value="Join" />
-</form>
-</div>
-</div>
-
 <hr/>
 <div class='row'>
 <div class='col-sm-6 col-sm-offset-3 text-align-center'>
 <p>Need to <a href="{% url 'auth_login' %}">Login</a>?</p>
 </div>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".required input").attr('class','form-control');
+	$(".errorlist li").attr('class','alert alert-danger');
+});
+</script>
 
 {% endblock %}

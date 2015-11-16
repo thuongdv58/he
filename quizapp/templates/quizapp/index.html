@@ -1,27 +1,30 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html ng-app = "quizApp">
         <title>Quiz App</title>
-        <script type="text/javascript" src="static/js/AngularJS/angular.min.js"></script>
-        <script type="text/javascript" src="static/js/ui-bootstrap-tpls-0.13.4.min.js"></script>
-        <script type="text/javascript" src="static/js/AngularJS/checklist-model.js"></script>
-        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <script type="text/javascript" src="{% static 'js/AngularJS/angular.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/ui-bootstrap-tpls-0.13.4.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/AngularJS/checklist-model.js'%}"></script>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="static/js/app.js"></script>
-        <link rel="stylesheet" type="text/css" href="static/css/effect.css"/>
-        <link rel="stylesheet" type="text/css" href="static/css/startmenu.css"/>
-        <link rel="stylesheet" type="text/css" href="static/css/animations.css"/>
-        <link rel="stylesheet" type="text/css" href="static/css/menu.css"/>
-        <link rel="stylesheet" type="text/css" href="static/css/leaderboard.css"/>
-        <link rel="stylesheet" type="text/css" href="static/css/hoverEffect.css"/>
-        <link rel="stylesheet" type="text/css" href ="static/css/bootstrap.min.css">
+        <script type="text/javascript" src="{% static 'js/app.js'%}"></script>
+		<link href="{% static 'css/effect.css' %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/effect.css'%}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/startmenu.css'%}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/animations.css'%}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/menu.css'%}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/leaderboard.css'%}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/hoverEffect.css'%}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/backgroundset.css'%}"/>
     </head>
     {% if not request.user.is_authenticated %}
-    <p>welcome to my website</p>
-    <a href="{% url 'auth_login' %}">Login</a><p> to answer or</p>
-    <a href="{% url 'registration_register' %}">Register a new account</a>
+	{% include 'navbar.html' %}
+	<body class='backgroundset'>
     {% endif %}
     {% block content %}
+	</body>
     </html>
     {% if request.user.is_authenticated %}
     <body>
