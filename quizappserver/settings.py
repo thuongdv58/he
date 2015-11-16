@@ -184,6 +184,7 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 SEND_ACTIVATION_EMAIL = False
 STATIC_URL = '/static/'
+STATIC_ROOT = 'staticfiles'
 from django.conf import global_settings
 
 TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (

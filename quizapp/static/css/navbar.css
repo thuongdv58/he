@@ -1,0 +1,13 @@
+      .logo{
+      font-size: 200%;
+      font-weight: bold;
+      font-family: georgia;
+      color: #1aa3ff;
+      } 
+	  .colorbar{
+		background-color:#404040 !important;
+		border-color: #443838 !important;
+	  }
+	  .register{
+		color:white;
+	  }	

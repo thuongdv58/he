@@ -1,16 +1,18 @@
    {% load staticfiles %}
-
+	<link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css'%}"/>
    <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top colorbar">
       <div class="container">
         <div id="navbar" class="navbar-collapse collapse">
-        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'home.png' %}" /></a>
+        <a class="navbar-brand" href="{% url 'index' %}"><span class='logo'>Quizapp</span></a>
           <ul class="nav navbar-nav navbar-right">
           {% if request.user.is_authenticated %}
             <li><a href="{% url 'auth_logout' %}">Logout</a></li>
             {% else %}
-            <li><a href="{% url 'registration_register' %}">Register</a></li>
-            {% endif %}
+			{% if not "/accounts/register/" in request.get_full_path %}
+            <li><a href="{% url 'registration_register' %}" ><p class='register'>Register</p></a></li>
+          {% endif %}
+		  {% endif %}
           </ul>
 
           {% if not request.user.is_authenticated and not "/accounts/login" in request.get_full_path %}
