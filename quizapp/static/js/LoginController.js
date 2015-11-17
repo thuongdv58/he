@@ -33,7 +33,7 @@ angular.module('starter.controllers')
                                 console.log("Server response: ", response);
                                 facebook.setUserId(response.data.id);
                                 facebook.setUserName(response.data.name);
-                                $ionicLoading.hide();
+                                $scopeLoading.hide();
                                 $state.go('menu');
                             }
                         }, function errorCallBack(response) {
